@@ -16,17 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import TravelAPIView, CarAPIView, HotelAPIView
+from app.views import TravelAPIView, CarAPIView, HotelAPIView, TravelDetailAPIView, CarDetailAPIView, HotelDetailAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('hometask/travel/', TravelAPIView.as_view()),
-    path('hometask/travel/<int:pk>/', TravelAPIView.as_view()),
+    path('hometask/travel/<int:pk>/', TravelDetailAPIView.as_view()),
 
     path('hometask/car/', CarAPIView.as_view()),
-    path('hometask/car/<int:pk>/', CarAPIView.as_view()),
+    path('hometask/car/<int:pk>/', CarDetailAPIView.as_view()),
 
     path('hometask/hotel/', HotelAPIView.as_view()),
-    path('hometask/hotel/<int:pk>/', HotelAPIView.as_view()),
+    path('hometask/hotel/<int:pk>/', HotelDetailAPIView.as_view()),
 ]
