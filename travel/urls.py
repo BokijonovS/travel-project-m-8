@@ -30,3 +30,4 @@ urlpatterns = [
     path('hometask/hotel/', HotelAPIView.as_view()),
     path('hometask/hotel/<int:pk>/', HotelDetailAPIView.as_view()),
 ]
+
